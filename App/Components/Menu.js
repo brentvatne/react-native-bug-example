@@ -21,9 +21,9 @@ class Menu extends React.Component{
       leftButtonTitle: 'Back',
       onLeftButtonPress: () => {
         this.props.navigator.pop();
-        this.props.toggleNavigation();
+        var self = this;
       },
-      passProps: { navigator: this.props.navigator }
+      passProps: { navigator: this.props.navigator, toggleNavigation: this.props.toggleNavigation }
     })
   }
   navigateToSettings() {
@@ -39,7 +39,7 @@ class Menu extends React.Component{
         this.props.navigator.pop();
         this.props.toggleNavigation();
       },
-      passProps: { navigator: this.props.navigator }
+      passProps: { navigator: this.props.navigator, toggleNavigation: this.props.toggleNavigation }
     })
   }
   render() {
